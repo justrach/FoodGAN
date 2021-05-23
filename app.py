@@ -1,7 +1,7 @@
 import streamlit as st
 from fastai import *
 from fastai.vision import *
-import fastai
+# import fastai
 import PIL 
 import torchvision.transforms as T
 from torch.utils.data import DataLoader, Dataset
@@ -54,3 +54,12 @@ if img_bytes is not None:
     img_tensor = T.ToTensor()(img_pil)
     img_fastai = Image(img_tensor)
     x = st.write(predict(img_fastai,4))
+
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)

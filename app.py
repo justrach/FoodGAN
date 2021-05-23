@@ -10,7 +10,7 @@ import tensorflow as tf
 # inferencer = load_learner(path)
 def load_model(path=".", model_name="model.pkl"):
     learn = load_learner(path, fname=model_name)
-    return learn ``
+    return learn 
 model = load_model('models')
 
 

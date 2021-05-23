@@ -2,4 +2,4 @@
 torch==1.8.1+cpu 
 torchvision==0.9.1+cpu
 fastai==1.0.42
-
+streamlit==0.82.0

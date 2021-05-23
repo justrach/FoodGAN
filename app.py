@@ -53,7 +53,7 @@ if img_bytes is not None:
     img_pil = PIL.Image.open(img_bytes)
     img_tensor = T.ToTensor()(img_pil)
     img_fastai = Image(img_tensor)
-    x = st.write(predict(img_fastai,4))
+    x = st.write(predict(img_fastai,3))
 
 
 hide_streamlit_style = """

@@ -5,7 +5,7 @@ import fastai
 import PIL 
 import torchvision.transforms as T
 from torch.utils.data import DataLoader, Dataset
-# import tensorflow as tf
+import tensorflow as tf
 # from PIL import Image
 # inferencer = load_learner(path)
 def load_model(path=".", model_name="model.pkl"):
@@ -37,12 +37,12 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
 
 
 
-# def load_image(img_path):
-#     img = tf.io.read_file(img_path)
-#     img = tf.io.decode_jpeg(img, channels = 3)
-#     img = tf.image.resize(img, size = (512, 512), method = 'bicubic')
-#     img = img / 255.0
-#     return img
+def load_image(img_path):
+    img = tf.io.read_file(img_path)
+    img = tf.io.decode_jpeg(img, channels = 3)
+    img = tf.image.resize(img, size = (512, 512), method = 'bicubic')
+    img = img / 255.0
+    return img
 
 
 img_bytes = st.file_uploader("Squash It!!", type=['png', 'jpg', 'jpeg'])

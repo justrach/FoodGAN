@@ -49,7 +49,7 @@ img_bytes = st.file_uploader("Squash It!!", type=['png', 'jpg', 'jpeg'])
 if img_bytes is not None:
     # image = PIL.create(file_uploaded)
     st.write("Image Uploaded Successfully:")
-    img123 = PIL.Image.open(img_bytes)
+    img = PIL.Image.open(img_bytes)
     img_pil = PIL.Image.open(img_bytes)
     img_tensor = T.ToTensor()(img_pil)
     img_fastai = Image(img_tensor)

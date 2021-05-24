@@ -5,7 +5,7 @@ import fastai
 import PIL 
 import torchvision.transforms as T
 from torch.utils.data import DataLoader, Dataset
-import tensorflow as tf
+# import tensorflow as tf
 # from PIL import Image
 # inferencer = load_learner(path)
 def load_model(path=".", model_name="model.pkl"):
